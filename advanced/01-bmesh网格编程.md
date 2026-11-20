@@ -168,7 +168,7 @@ print("ARCH OK, verts =", len(arch.data.vertices))
 
 **验证**：脚本输出 `ARCH OK, verts = 132, faces = 98`，场景里出现一段马蹄形拱券。
 
-![bmesh 生成的倒角立方体与拱券](images/fig_bmesh_arch.png)
+![bmesh 生成的倒角立方体与拱券](images/fig_bmesh_arch.jpg)
 
 上图是同一脚本渲染的结果：左边是 bmesh 倒角后的立方体，中间是程序化生成的拱券，右边是合并后的球体加立方体——注意球体上的立方体**保持了原位**，这正是 `transform(matrix_world)` 的作用。
 
