@@ -2,7 +2,7 @@
 
 一份面向零基础新人的 Blender 入门教程，从第一次打开软件，到独立建模、上材质、渲染出第一张作品。
 
-![渲染成品](../advanced/images/fig_render.png)
+![渲染成品](images/fig_render.png)
 
 ## 关于本指南
 
@@ -38,4 +38,4 @@
 
 本指南所有界面截图均由本地 Blender **真实操作**产生，非示意图或 AI 生成。图中橙色描边与编号用于标注重点区域。
 
-![界面五大区域](../advanced/images/fig_interface.png)
+![界面五大区域](images/fig_interface.png)

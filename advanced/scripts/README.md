@@ -14,12 +14,34 @@ blender -b --factory-startup -noaudio -P <脚本>.py -- ./out
 
 | 脚本 | 对应章节 | 内容 | 验证输出 |
 |------|---------|------|---------|
-| `verify_01_bmesh.py` | [01 bmesh](01-bmesh网格编程.md) | 倒角立方体、程序化拱券、物体合并 | `BEVEL verts=96` / `ARCH verts=132 faces=98` / `MERGE 482→490` |
-| `verify_03_roof.py` | [03 程序化曲面](03-程序化曲面.md) | 中式起翘屋面 + 瓦当 + 参数化生成一排屋顶 | `ROOF verts=640 faces=410` |
-| `verify_05_geonodes.py` | [05 几何节点](05-几何节点入门.md) | 面上随机分布实例 | `GN built, nodes = 6` |
-| `verify_06_material.py` | [06 节点编辑器](06-节点编辑器思维.md)、[07 程序化纹理](07-程序化纹理.md) | 白墙风化 + 青砖苔痕材质 | `RENDER_OK` |
-| `verify_09_compositor.py` | [09 渲染与后期](09-渲染与后期合成.md) | 完整后期链路：Bloom→调色→S曲线→暗角→畸变 | `COMP nodes = 11` |
-| `verify_10_advanced.py` | [02](02-修改器系统.md)/[10](10-关键帧与运镜.md)/[11](11-约束与驱动器.md)/[12](12-场景工程化.md) | 修改器栈、F曲线、驱动器、约束、集合实例 | `FCURVES count=6` / `DRIVER ok` / `CONSTRAINT ok` |
+| `canal_build.py` | [13 完整实战](../13-完整实战复刻.md) | **完整项目脚本**（1685 行）：河道、30 栋民居、石拱桥、灯笼招牌、乌篷船、灯光、运镜、后期合成 | `[canal] SCENE BUILT` |
+| `verify_01_bmesh.py` | [01 bmesh](../01-bmesh网格编程.md) | 倒角立方体、程序化拱券、物体合并 | `BEVEL verts=96` / `ARCH verts=132 faces=98` / `MERGE 482→490` |
+| `verify_03_roof.py` | [03 程序化曲面](../03-程序化曲面.md) | 中式起翘屋面 + 瓦当 + 参数化生成一排屋顶 | `ROOF verts=640 faces=410` |
+| `verify_05_geonodes.py` | [05 几何节点](../05-几何节点入门.md) | 面上随机分布实例 | `GN built, nodes = 6` |
+| `verify_06_material.py` | [06 节点编辑器](../06-节点编辑器思维.md)、[07 程序化纹理](../07-程序化纹理.md) | 白墙风化 + 青砖苔痕材质 | `RENDER_OK` |
+| `verify_09_compositor.py` | [09 渲染与后期](../09-渲染与后期合成.md) | 完整后期链路：Bloom→调色→S曲线→暗角→畸变 | `COMP nodes = 11` |
+| `verify_10_advanced.py` | [02](../02-修改器系统.md)/[10](../10-关键帧与运镜.md)/[11](../11-约束与驱动器.md)/[12](../12-场景工程化.md) | 修改器栈、F曲线、驱动器、约束、集合实例 | `FCURVES count=6` / `DRIVER ok` / `CONSTRAINT ok` |
+
+## 完整项目：canal_build.py
+
+这是进阶版贯穿案例的**真实完整实现**，不是示例片段。它一次性程序化生成整条水巷：
+
+```bash
+# 生成场景并保存 .blend
+blender -b --factory-startup --python canal_build.py -- --out ./out
+
+# 出主图
+blender -b --factory-startup --python canal_build.py -- \
+    --out ./out --mode hero --frame 165 --res 2400x1350 --samples 96
+
+# 出 32 帧
+blender -b --factory-startup --python canal_build.py -- \
+    --out ./out --mode frames --count 32 --res 1600x900 --samples 64
+```
+
+> ⚠️ 脚本顶部 `FONT_PATH` 指向 `C:/Windows/Fonts/STKAITI.TTF`（Windows 楷体）。非 Windows 环境请改成你的中文字体路径。
+
+产出效果见 [第 13 章](../13-完整实战复刻.md)，或直接看仓库根目录的成片演示。
 
 ## 渲染产物
 
