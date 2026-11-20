@@ -2,3 +2,6 @@
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Blender 渲染产物
+advanced/scripts/out/
