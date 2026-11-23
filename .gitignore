@@ -5,3 +5,6 @@ desktop.ini
 
 # Blender 渲染产物
 advanced/scripts/out/
+
+# 高级版脚本运行产物
+pro/scripts/out/
