@@ -45,6 +45,7 @@ cases/bust/
 ## 相关阅读
 
 - [六轴机械臂](../arm/README.md) — 链式层级
+- [角色绑定与表情](../rigging/README.md) — 骨架、蒙皮与表情系统
 - [科幻无人机](../drone/README.md) — 径向装配
 - [写实红苹果](../apple/README.md) — 有机曲面与四边面环线
 - [高级版](../../pro/README.md) — 骨骼绑定、蒙皮权重与表情
