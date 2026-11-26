@@ -32,13 +32,14 @@
 
 **三版是递进关系**：进阶版默认你已掌握入门版的操作，高级版默认你会写基础 Python。
 
-另外还有五个可动手跟做的完整案例：
+另外还有六个可动手跟做的完整案例：
 
 - [**写实红苹果静物**](cases/apple/README.md)：有机曲面，六步走完从参考到成品，含 6 个阶段快照。
 - [**复古收音机**](cases/radio/README.md)：硬表面，练倒角、布尔开孔、加权法线与多材质搭配，同样含 6 个阶段快照。
 - [**科幻四轴无人机**](cases/drone/README.md)：复合装配，练径向重复、发光材质与辉光后期，含 6 个阶段快照。
 - [**六轴机械臂**](cases/arm/README.md)：链式层级，练父子关节、局部坐标与 FK 姿态，含 6 个阶段快照。
 - [**人物胸像**](cases/bust/README.md)：参数化塑形、面部拓扑与骨架预留，含 6 个阶段快照。
+- [**数字雕刻流程**](cases/sculpt/README.md)：分层雕刻、手工笔刷与烘焙，含 6 个阶段快照。
 
 ## 最终效果
 
@@ -58,7 +59,7 @@
 - **会基本操作，但想提高效率** → 直接看 [进阶版](advanced/README.md)
 - **要做角色、特效、或写插件** → 看 [高级版](pro/README.md)
 - **想直接看结果** → [进阶版第 13 章完整实战](advanced/13-完整实战复刻.md)
-- **想亲手完整做一个** → [红苹果（有机）](cases/apple/README.md) / [收音机（硬表面）](cases/radio/README.md) / [无人机（径向装配）](cases/drone/README.md) / [机械臂（链式层级）](cases/arm/README.md) / [人物胸像（面部拓扑）](cases/bust/README.md)
+- **想亲手完整做一个** → [红苹果（有机）](cases/apple/README.md) / [收音机（硬表面）](cases/radio/README.md) / [无人机（径向装配）](cases/drone/README.md) / [机械臂（链式层级）](cases/arm/README.md) / [人物胸像（面部拓扑）](cases/bust/README.md) / [数字雕刻（起形工程）](cases/sculpt/README.md)
 
 ## 仓库内容
 
@@ -102,9 +103,14 @@
 │   ├── images/                侧视参考 + 最终渲染
 │   ├── blends/                6 个阶段快照
 │   └── scripts/               一键重建脚本
-└── cases/bust/               实战案例：人物胸像（面部拓扑）
+├── cases/bust/               实战案例：人物胸像（面部拓扑）
+│   ├── README.md + 01 ~ 06 六章
+│   ├── images/                正面参考 + 最终渲染
+│   ├── blends/                6 个阶段快照
+│   └── scripts/               一键重建脚本
+└── cases/sculpt/             实战案例：数字雕刻流程（起形工程）
     ├── README.md + 01 ~ 06 六章
-    ├── images/                正面参考 + 最终渲染
+    ├── images/                参考图 + 起形渲染
     ├── blends/                6 个阶段快照
     └── scripts/               一键重建脚本
 ```
