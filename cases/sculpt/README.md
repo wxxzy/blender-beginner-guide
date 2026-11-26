@@ -44,4 +44,5 @@ cases/sculpt/
 ## 相关阅读
 
 - [人物胸像](../bust/README.md) — 参数化起形与骨架
-- [高级版](../../pro/README.md) — 骨骼绑定、物理与完整角色流程
+- [角色绑定与表情](../rigging/README.md) — 骨架、权重与表情系统
+- [高级版](../../pro/README.md) — 物理与扩展开发
